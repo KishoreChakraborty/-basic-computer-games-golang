@@ -1,0 +1,58 @@
+Acey Ducey Login Pseudo code
+
+START:
+    SHOW GAME INFO:
+        show game info
+
+    GAME LOOP:
+        INITIALIZE:
+            current Money < CURRMONEY
+            total Money < TOTALMONEY
+
+        DO TILL CURRMONEY <= 0:
+
+            TELL USER THEIR MONEY:
+                Tell user how much money they have
+
+            DRAW CARDS:
+                CALCULATE 1st Number:
+                    Come up with a number between 2 and 14 (included) < NUMBER1
+                    Come up with a number between 2 and 14 (included) and not equal to first number < NUMBER2
+
+            SHOW CARDS:
+                show cards
+
+            ASK FOR  BETs:
+                What is your BET, < BET
+                    VALIDATE BET:
+                        Can player bet what he wants?
+                        No:
+                            Say YOU BET TOO MUCH
+                            Go to ASK FOR  BETs
+                        Yes:
+                            BET = what player wants to bet
+
+                SAY CHICKEN OR NOT
+
+            DRAW PLAYER CARD:
+                Come up with a number between 2 and 14 (included) < PLAYERNUMBER
+
+            COMPUTE RESULT:
+                is PLAYERNUMBER between NUMBER1 and NUMBER2?  < WON or LOST
+
+            CALCULATE WINNINGS:
+                if WON:
+                    CURRMONEY += BET
+                if LOST:
+                    CURRMONEY -= BET
+
+    END GAME LOOP
+
+    ASK TO CONTINUE:
+        Ask to continue ? < CONTINUE
+        if CONTINUE:
+            Go TO GAME LOOP
+        else:
+            say "OK HOPE YOU HAD FUN"
+END:
+
